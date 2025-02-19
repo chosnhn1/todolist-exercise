@@ -1,14 +1,14 @@
 // get input components
 const todoInput = document.getElementById('newtodo');
-const todoList = document.getElementById('listComponent');
+const todoList = document.getElementById('todolist');
 
 // function called for adding new todo
 const addNewTodo = () => {
+  // build individual todo
   const text = todoInput.value.trim();
   const listItem = document.createElement('li');
   const deleteButton = document.createElement('button');
   
-  // build individual todo
   listItem.textContent = text;
   deleteButton.classList.add('delete-button')
   deleteButton.textContent = "delete"
@@ -31,3 +31,11 @@ resetButton.addEventListener('click', () => {
 // submit button
 const submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', addNewTodo);
+
+// reset all button
+const resetAllButton = document.getElementById('resetall');
+resetAllButton.addEventListener('click', () => {
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.firstChild)
+  };
+});

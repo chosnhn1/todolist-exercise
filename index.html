@@ -7,15 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>TodoList</h1>
-  <div class="inputComponent">
-    <input type="text" name="newtodo" id="newtodo">
-    <button type="submit" id="submit">Submit</button>
-    <button type="reset" id="reset">Reset</button>
-    <h2>List: </h2>
-  </div>
-  <div class="listComponent" id="listComponent">
-  </div>
+  <main class="app">
+    <h1 class="title">TodoList</h1>
+    <div class="inputComponent">
+      <input type="text" name="newtodo" id="newtodo">
+      <button type="submit" id="submit">Submit</button>
+      <button type="reset" id="reset">Reset</button>
+    </div>
+    <div class="listComponent" id="listComponent">
+      <h2>List: </h2>
+      <ul class="todolist" id="todolist">
+      </ul>
+    </div>
+    <button type="reset" id="resetall">reset all</button>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
